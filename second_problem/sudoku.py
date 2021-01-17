@@ -86,28 +86,28 @@ class Game:
     def show_for_user(self):
         for i in range(9):
             if i == 3 or i == 6:
-                print('\n')
+                print()
             for j in range(9):
                 if j == 3 or j == 6:
-                    print('     ', end='')
+                    print(' ', end='')
                 print(self.board.game_board_delete[i][j], end=' ') 
-            print('\n')
+            print()
             
     def show_full_board(self):
         for i in range(9):
             if i == 3 or i == 6:
-                print('\n')
+                print()
             for j in range(9):
                 if j == 3 or j == 6:
-                    print('     ', end='')
+                    print(' ', end='')
                 print(self.board.game_board[i][j], end=' ') 
-            print('\n')
+            print()
 
-#пример доски
-print('\nпример доски\n')
-game = Game(50)
+#пример доски 
+print('Введите число клеток, которые будут заполнены: ')
+r = int(input())
+game = Game(r)
+print('\nВаша доска\n')
 game.show_for_user()
-#пример сгенерированной доски
-print('\nпример сгенерированной доски\n')
-game = Game(50)
+print('\nПравильная доска выглядит как\n')
 game.show_full_board()
